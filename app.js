@@ -9,7 +9,7 @@ require("dotenv").config({ path: __dirname + "/.gitignore/.env" });
 // SETTING PORT FROM ENVIRONMENT VARIABLE. DEFAULT: 3000
 const port = process.env.PORT || 3000;
 
-// SETTING EXPRESS
+// SETTING UP EXPRESS
 const app = express();
 
 // EJS CONFIG FOR TEMPLATES
