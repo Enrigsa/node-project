@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+}
+
+nav {
+  padding: 2em;
+  height: 5em;
+  width: 100%;
+}
+
+.nav-item {
+  font-size: 19px;
+  margin: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: solid gray 1px;
+  padding: 2em;
+}
+.description {
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0.5em 3em;
+}
+p {
+  font-size: 1.2em;
+}
+
+#input-nav {
+  margin-left: 2em;
+}
+
+#devops-img,
+#error-img {
+  width: 200px;
+}
+
+footer {
+  background-color: rgb(248, 249, 250);
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
