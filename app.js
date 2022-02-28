@@ -6,7 +6,7 @@ const ejs = require("ejs");
 // DOTENV MODULE TO IMPORT ENV VARIABLES
 require("dotenv").config({ path: __dirname + "/.gitignore/.env" });
 
-// SETTING PORT FROM ENVIRONMENT VARIABLE. DEFAULT: 3000 
+// SETTING PORT FROM ENVIRONMENT VARIABLE. DEFAULT: 3000
 const port = process.env.PORT || 3000;
 
 // SETTING UP EXPRESS
@@ -27,11 +27,11 @@ app.use("/js", express.static("node_modules/bootstrap/dist/js"));
 app.get("/", (req, res) => {
   // Showing different modes of production
   if (process.env.NODE_ENV === "production") {
-    res.render("index1", {modo: "Produccion"});
-  } else if (process.env.NODE_ENV === "development"){
-    res.render("index1", {modo: "Desarrollo"});
+    res.render("index1", { modo: "Produccion" });
+  } else if (process.env.NODE_ENV === "development") {
+    res.render("index1", { modo: "Desarrollo" });
   } else {
-    res.render("index1", {modo: "Sin especificar"});
+    res.render("index1", { modo: "Sin especificar" });
   }
 });
 
@@ -59,14 +59,14 @@ app.get("/framework", (req, res) => {
 });
 
 // SERVING 404 ERROR PAGE
-app.get("/not-found", (req, res) =>{
+app.get("/not-found", (req, res) => {
   res.status(404).render("404", {});
-})
+});
 
 // REDIRECTION TO AVOID DIFFERENT DIRECTORY LEVELS
-app.use((req,res,next)=>{
-  res.redirect('/not-found')
-})
+app.use((req, res, next) => {
+  res.redirect("/not-found");
+});
 
 // SETTING UP SERVER
 app.listen(port, () => {
